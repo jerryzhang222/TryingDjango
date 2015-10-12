@@ -7,13 +7,13 @@ from django.db import models, migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('join', '0001_initial'),
+        ('join', '0002_join_ip_address'),
     ]
 
     operations = [
-        migrations.AddField(
+        migrations.AlterField(
             model_name='join',
-            name='file',
-            field=models.FileField(default=b'http://www.hooyou.com/services/contracts/I539B1.pdf', upload_to=b''),
+            name='email',
+            field=models.EmailField(unique=True, max_length=254),
         ),
     ]
